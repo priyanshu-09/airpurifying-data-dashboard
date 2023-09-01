@@ -1,13 +1,34 @@
 import React, { useState } from "react";
+import axios from "axios";
 import styles from "../styles/Login.module.css";
+import { BASE_URL, ENDPOINTS } from "../utils/networkConstants";
+import { toast } from "react-toastify";
 
 export const Login = ({ setSignedIn }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = () => {
-    if (email !== "" && password !== "") {
-      setSignedIn(true);
+  const handleSubmit = async () => {
+    try {
+      const { data } = await axios.post(
+        BASE_URL + ENDPOINTS.LOGIN,
+        {
+          email: email,
+          password: password,
+        },
+        { withCredentials: true }
+      );
+
+      const { success, message } = data;
+      if (success) {
+        setSignedIn(true);
+      } else {
+        toast.error(message, {
+          position: "bottom-left",
+        });
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 

@@ -20,4 +20,5 @@ export const ENDPOINTS = {
   GET_ONE: "/getOne",
   GET_PM_VALUE: "/getPmValue",
   GET_TIME_RANGE_DATA: "/getTimeRangeData",
+  LOGIN: "/login",
 };

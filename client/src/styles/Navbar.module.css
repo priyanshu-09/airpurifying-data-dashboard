@@ -1,0 +1,19 @@
+.wrapper {
+  width: calc(100vw - 60px);
+  height: auto;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cta-color);
+}
+.heading {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.toggleWrapper {
+  font-size: 1.5rem;
+  cursor: pointer;
+}

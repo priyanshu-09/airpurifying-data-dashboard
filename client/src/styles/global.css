@@ -1,0 +1,17 @@
+:root {
+  --font-color: #333;
+  --background-color: #f1f6b6;
+  --cta-color: #b7c892;
+}
+
+/* 2 */
+[data-theme="dark"] {
+  --font-color: #eee;
+  --background-color: #0d1c0d;
+  --cta-color: #1e361b;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+}

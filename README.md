@@ -1,35 +1,37 @@
-# Getting Started with Create React App
+# Getting Started with this Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## For running backend
 
-In the project directory, you can run:
+Clone this repository on your local machine
+
+Then head towards /api directory.
+
+### `npm install`
+
+Installs the dependencies for this project's backend
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the express.js application in the development mode.\
+You can use [http://localhost:3001](http://localhost:3001) for accessing the APIs on Postman
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## For running frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+From the main directory head to /client directory
 
-### `npm run build`
+### `npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Installs the dependencies for this project's frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm start`
 
-### `npm run eject`
+Runs the React application in the development mode.\
+You can use [http://localhost:3000](http://localhost:3000) to access the application
+
+<!-- ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
@@ -67,4 +69,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

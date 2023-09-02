@@ -1,6 +1,5 @@
 # Getting Started with this Application
 
-
 ## For running backend
 
 Clone this repository on your local machine
@@ -16,7 +15,6 @@ Installs the dependencies for this project's backend
 Runs the express.js application in the development mode.\
 You can use [http://localhost:3001](http://localhost:3001) for accessing the APIs on Postman
 
-
 ## For running frontend
 
 From the main directory head to /client directory
@@ -25,12 +23,16 @@ From the main directory head to /client directory
 
 Installs the dependencies for this project's frontend
 
-
 ### `npm start`
 
 Runs the React application in the development mode.\
 You can use [http://localhost:3000](http://localhost:3000) to access the application
 
+## Things to keep in mind
+
+1. The MongoDb won't run on your local network unless you add your current IP Address to the whitelisted IPs on the Cluster
+2. Keep in mind to place the .env file in the /api directory of this project
+3. In case the PORT "3000" is occupied on your machine, do change the value of the current running port at /api/index.js:25 
 <!-- ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**

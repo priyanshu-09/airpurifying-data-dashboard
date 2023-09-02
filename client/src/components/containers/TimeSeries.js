@@ -19,8 +19,8 @@ import { toast } from "react-toastify";
 
 export const TimeSeries = ({ deviceIdArr }) => {
   const [currentDeviceIdIndex, setCurrentDeviceIdIndex] = useState(0);
-  const [startDate, setStartDate] = useState(new Date("2021/05/08"));
-  const [endDate, setEndDate] = useState(new Date("2021/08/08"));
+  const [startDate, setStartDate] = useState(new Date("2021/05/03"));
+  const [endDate, setEndDate] = useState(new Date("2021/05/10"));
 
   const [devicesData, setDevicesData] = useState([]);
 
@@ -33,7 +33,7 @@ export const TimeSeries = ({ deviceIdArr }) => {
 
         { withCredentials: true }
       );
-      console.log(data);
+
       if (data[currentDeviceIdIndex]?.data) {
         setDevicesData(data[currentDeviceIdIndex]?.data);
       } else {
@@ -95,7 +95,7 @@ export const TimeSeries = ({ deviceIdArr }) => {
               bottom: 50,
             }}
           >
-            <CartesianGrid strokeDasharray="3 3" />
+            {/* <CartesianGrid strokeDasharray="10 10" /> */}
             <XAxis
               tickMargin={40}
               angle={-30}
@@ -107,25 +107,25 @@ export const TimeSeries = ({ deviceIdArr }) => {
             <YAxis />
             <Tooltip />
             <Area
-              type="monotone"
+              //   type="monotone"
               dataKey="pm1"
-              stackId="1"
+              stackId="2"
               stroke="#8884d8"
-              fill="#8884d8"
+              fill="none"
             />
             <Area
-              type="monotone"
+              //   type="monotone"
               dataKey="pm25"
-              stackId="1"
+              stackId="3"
               stroke="#82ca9d"
-              fill="#82ca9d"
+              fill="none"
             />
             <Area
-              type="monotone"
+              //   type="monotone"
               dataKey="pm10"
               stackId="1"
               stroke="#ffc658"
-              fill="#ffc658"
+              fill="none"
             />
           </AreaChart>
         </ResponsiveContainer>

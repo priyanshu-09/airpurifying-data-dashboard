@@ -14,7 +14,8 @@ async function getPMValues(req, res) {
       };
 
       const pmData = device.data.map((datapoint) => ({
-        pmValue: datapoint[pmValueToFind],
+        [device.deviceId]: datapoint[pmValueToFind],
+        timestamp: datapoint["timestamp"],
       }));
       return { ...deviceInfo, data: pmData };
     });

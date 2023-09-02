@@ -46,7 +46,7 @@ export const Table = ({ deviceIdArr }) => {
         <div className={styles.tableHeadings}>Wind Direction</div>
         <div className={styles.tableHeadings}>Wind Speed</div>
         <div className={styles.tableHeadings}>pm1</div>
-        <div className={styles.tableHeadings}>pm25</div>
+        <div className={styles.tableHeadings}>pm2.5</div>
         <div className={styles.tableHeadings}>pm10</div>
       </div>
       <div className={styles.tableContainer}>

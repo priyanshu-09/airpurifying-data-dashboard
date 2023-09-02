@@ -6,6 +6,7 @@ import { TabSwitcher } from "./containers/TabSwitcher";
 import { Table } from "./containers/Table";
 import { ChartHeading } from "./containers/ChartHeading";
 import { TimeSeries } from "./containers/TimeSeries";
+import { Comparison } from "./containers/Comparison";
 
 export const Dashboard = ({ setSignedIn }) => {
   const [deviceIdArr, setDeviceIdArr] = useState([]);
@@ -41,6 +42,8 @@ export const Dashboard = ({ setSignedIn }) => {
 
       <ChartHeading text="Time Series Graph" />
       <TimeSeries deviceIdArr={deviceIdArr} />
+      <ChartHeading text="Comparison Graph for Different pm values" />
+      <Comparison deviceIdArr={deviceIdArr} />
     </div>
   );
 };

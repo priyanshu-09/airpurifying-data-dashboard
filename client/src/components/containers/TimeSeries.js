@@ -20,7 +20,7 @@ import { toast } from "react-toastify";
 export const TimeSeries = ({ deviceIdArr }) => {
   const [currentDeviceIdIndex, setCurrentDeviceIdIndex] = useState(0);
   const [startDate, setStartDate] = useState(new Date("2021/05/03"));
-  const [endDate, setEndDate] = useState(new Date("2021/05/10"));
+  const [endDate, setEndDate] = useState(new Date("2021/05/04"));
 
   const [devicesData, setDevicesData] = useState([]);
 

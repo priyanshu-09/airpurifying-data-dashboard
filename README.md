@@ -32,7 +32,7 @@ You can use [http://localhost:3000](http://localhost:3000) to access the applica
 
 1. The MongoDb won't run on your local network unless you add your current IP Address to the whitelisted IPs on the Cluster
 2. Keep in mind to place the .env file in the /api directory of this project
-3. In case the PORT "3000" is occupied on your machine, do change the value of the current running port at /api/index.js:25 
+3. In case the PORT "3000" is occupied on your machine, do change the value of the current running port at /api/index.js:26 
 <!-- ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**

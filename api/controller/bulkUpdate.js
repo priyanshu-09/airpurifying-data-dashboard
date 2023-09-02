@@ -6,6 +6,7 @@ function bulkUpdate(csvData, req, res) {
   const results = [];
   let deviceId = "";
 
+  // Reading the CSV File
   const readableStream = require("stream").Readable.from(csvData);
 
   let rowNumber = 0;
@@ -27,6 +28,7 @@ function bulkUpdate(csvData, req, res) {
         results.push(newDataPoint);
         rowNumber += 1;
       } catch (error) {
+        // There were some values where the value of timestamp was empty, this catch method returns those errors
         console.log(error);
       }
     })
@@ -36,6 +38,7 @@ function bulkUpdate(csvData, req, res) {
       AirPurifierData.findOne({ deviceId: deviceId })
         .then((existingDocument) => {
           if (existingDocument) {
+            // 409 is the HTTPS Code for Conlict
             res.status(409).json({
               message: "A document with the same deviceId already exists!",
             });
@@ -61,6 +64,7 @@ function bulkUpdate(csvData, req, res) {
     });
 }
 
+// Function to convert the date-time string from CSV to a valid Date
 function validDate(dateString) {
   const [datePart, timePart] = dateString.split(",");
   const [year, month, day] = datePart.split("/");

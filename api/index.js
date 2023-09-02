@@ -20,6 +20,7 @@ mongoose
 
 const app = express();
 
+// This origin value needs to be changed in case the React Application is running on a different port other than 3000
 app.use(
   cors({
     origin: [`http://localhost:3000`],

@@ -13,6 +13,7 @@ async function getPMValues(req, res) {
         deviceId: device.deviceId,
       };
 
+      // This array of object returns the deviceId as key and the desired pm value as the value which is useful to show the comparison chart
       const pmData = device.data.map((datapoint) => ({
         [device.deviceId]: datapoint[pmValueToFind],
         timestamp: datapoint["timestamp"],

@@ -17,6 +17,8 @@ const upload = multer({ storage });
 
 router.post("/signup", Signup);
 router.post("/login", Login);
+
+// This route is a simple POST route which is trigerred at the start when you open the React Application to check whether the app is still authenticated
 router.post("/", userVerification, (req, res) => {
   res.json({ status: true });
 });

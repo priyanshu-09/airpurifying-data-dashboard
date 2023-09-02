@@ -17,6 +17,9 @@ const upload = multer({ storage });
 
 router.post("/signup", Signup);
 router.post("/login", Login);
+router.post("/", userVerification, (req, res) => {
+  res.json({ status: true });
+});
 
 router.post(
   "/bulkUpdate",

@@ -26,7 +26,7 @@ async function getDataByTimeRange(req, res) {
     });
 
     if (areAllValuesNull(filteredValues)) {
-      return res.status(404).json({ message: "No data found" });
+      return res.json({ message: "No data found" });
     }
     res.json(filteredValues);
   } catch (error) {

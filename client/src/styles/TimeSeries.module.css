@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+.datePickerWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.datePickerContainer {
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.datePickerContainer input {
+  background-color: var(--cta-color);
+  font-size: 0.7rem;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: 900;
+}
